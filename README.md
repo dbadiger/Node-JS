@@ -8,3 +8,5 @@
 
 #### Are Node JS and JavaScript Same?
 ##### JavaScript and Node JS code syntax is same. If you know JavaScript, you can easily understand Node JS.<br> But both are not exactly same.<br> You cannot connect JavaScript to Database, whereas we can connect Node JS with database.<br> Node JS run on the server side, JavaScript run on the browser.
+
+##### Developers make APIs with Node JS. These APIs used for Web, Android, IOS, and etc.<br>Node JS is used to connect the Server with Client. <br> Node JS is also used to develop web applications.
