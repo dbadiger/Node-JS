@@ -1,7 +1,7 @@
 # Node-JS
 ## About Node JS 
 #### WHat is Node JS?
-###### Node Js is not language. It is server Enviornment.<br>Code and syntax are very similar to JavaScript, But not exactly same.<br> Node JS can connect with database.<br> Node JS use chrome's V8 Engine to execute the code. <br> Node JS is free and Open-source.
+##### Node Js is not language. It is server Enviornment.<br>Code and syntax are very similar to JavaScript, But not exactly same.<br> Node JS can connect with database.<br> Node JS use chrome's V8 Engine to execute the code. <br> Node JS is free and Open-source.
 
 #### Why do we use Node JS?
 ##### Node JS is mostly used for API. So we can connect the same database with web App, Mobile App.<br> Node JS is easy to understand who knows the Javascript already. <br> With the help of NodeJS and JavaScript we can become Full Stack Developer.
