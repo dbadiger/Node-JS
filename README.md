@@ -20,4 +20,4 @@
 
 
 #### Non-Global Modules/Non-Global Packages
-##### These are packages, which can used in our application by installing them externally. To include the packages, use 'require()' function with the name of module/Package.<br>Example: const http = require('http');<br> const colors = require('colors');<br>console.log("package.json".green);<br>console.log("package.json".red);<br>console.log("package.json".black);<br>console.log("package.json".bgBlue);<br>We can create our own packages also.
+##### These are packages, which can used in our application by installing them externally. To include the packages, use 'require()' function with the name of module/Package.<br>Example: const http = require('http');<br>const fs = require('fs');<br> const colors = require('colors');<br>console.log("package.json".green);<br>console.log("package.json".red);<br>console.log("package.json".black);<br>console.log("package.json".bgBlue);<br><br>We can create our own packages also.
