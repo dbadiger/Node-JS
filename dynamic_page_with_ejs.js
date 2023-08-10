@@ -34,3 +34,21 @@ app.listen(4000);
   </body>
   </html>
 
+//Create common header file for multiple files
+//header.ejs
+<nav>
+  <h1>This is Header File<h1>
+  </nav>
+
+//Include headr file in other files
+//login.ejs
+<body>
+  <%- include ('/header); %>
+    <h1> Login Page</h1>
+ </body>
+
+  //about.ejs
+  <body>
+  <%- include ('/header); %>
+    <h1> About Page</h1>
+ </body>        
