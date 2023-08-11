@@ -30,3 +30,31 @@ localhost:4000/?age=10
 If the age is grater than or equal to 18, display message as Welcome to Home page
 localhost:4000/?age=34
 localhost:4000/users/?age=34
+
+//index.js
+const express = require('express');
+const app = express();
+
+//creating middleware
+const middfunction = (req, resp, next)=>{
+  //console.log("Middleware connected");
+  if(!req.query.age){
+    resp.send("Please provide Age);
+  }
+  else if(req.query.age<18){
+    resp.send("You cannot access the page);
+  }
+  else{
+  next();    //one of the most important function in middleware. if we skip this function, middleware will not execute other functions/pages in the application
+  }
+}
+app.use(middfunction);
+
+app.get('/',(req, resp)=>{
+  resp.send("Welcome to home page);
+});
+app.get('/users', ()=>{
+  resp.send("Welcome to user page");
+});
+app.listen(4000);
+  
