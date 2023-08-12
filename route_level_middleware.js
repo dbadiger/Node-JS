@@ -30,4 +30,9 @@ app.get('/about', (req, resp)=>{
   resp.send("Welcome to About Page");
 });
 
+
+app.get('/help', route_middleware, (req, resp)=>{      //applying middleware to Help page
+  resp.send("Welcome to Help Page");
+});
+
 app.listen(4000);
