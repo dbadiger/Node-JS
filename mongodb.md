@@ -3,6 +3,10 @@
 
 
 Displays all databases:
->>> show dbs;
->>> use my_new_db;    //creating new Database
->>> 
+ show dbs;
+ use my_new_db;    //creating new Database
+db.createCollection("Users");    //creating 'Users' collection(table) in 'my_new_db' database 
+show collections        //Display All colletions in database
+db.createCollection("Products");
+db.Users.drop();         //delete Users Collection
+db.dropDatabase;        //drop current database (my_new_db database)
