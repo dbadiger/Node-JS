@@ -1,21 +1,17 @@
-const connectdb= require('./config');
+const mongoDB = require('mongodb');
+const express = require('express');
+const dbconnect = require('./config');
+const app = express();
 
-const deleteData = async()=>{
-  let data = await connectdb();
+app.use(express.json());
+
+app.delete("/:_id", async(req, resp)=>{
+    const data = await dbconnect();
   let result = await data.deleteOne(
-    {name:'iphone 14'}
-  )
-  console.log(result);
-}
-deleteData();
+    {
+      _id:new mongodb.ObjectId(req.params.id);
+    });
+  resp.send(result);
+})
 
-//delete Multiple data that have same name
-const deleteMultiple = async()=>{
-  let data = await connectdb();
-  let result = await data.deleteMany(
-    {name:'iphone 14'}
-  )
-  if(result.acknowledged){
-    console.log("Deletion Successful")
-  }
-}
+app.listen(4000);
