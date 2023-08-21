@@ -49,4 +49,29 @@ app.put("/", (req, resp)=>{
     })
 });
 
+//PUT API using Dyanamic Data
+app.put("/", (req, resp)=>{
+  const data = [req.body.name, req.body.password, req.body.age, req.body.email, req.params.id];
+  conn.query(
+    "update users set
+    name=?, password=?, age=?, email=?
+    where id=?",
+    data,
+    (err, result, fields)=>{
+      if(err)  throw error;
+      resp.send(result);
+    })
+});
+
+
+//DELETE API
+app.delete("/", (req, resp)=>{
+  conn.query(
+    "delete from users where id="+req.params.id,
+    (err, result)=>{
+      if(err) throw error;
+      resp.send(result)
+    }
+  )
+});
 app.listen(4000);
